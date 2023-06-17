@@ -10,11 +10,11 @@ window
   })
   .then((res) => {
     const questions = res.shuffle ? shuffle(res.questions) : res.questions;
-    el.innerHTML = '"' + questions[counter] + '"';
+    el.innerHTML = questions[counter];
     body.onclick = function () {
       counter++;
       counter = counter < questions.length ? counter : 0;
-      el.innerHTML = '"' + questions[counter] + '"';
+      el.innerHTML = questions[counter];
     };
   });
 
